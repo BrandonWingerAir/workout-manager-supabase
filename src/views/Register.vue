@@ -90,6 +90,7 @@ export default {
       }
 
       errorMsg.value = "Error: Passwords do not match";
+      
       setTimeout(() => {
         errorMsg.value = null;
       }, 5000);
