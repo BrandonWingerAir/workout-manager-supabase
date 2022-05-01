@@ -48,14 +48,14 @@
 import { ref } from "vue";
 
 export default {
-  name: "register",
+  name: "login",
   setup() {
     // Create data / vars
     const email = ref(null);
     const password = ref(null);
     const errorMsg = ref(null);
 
-    // Register function
+    // Login function
 
     return { email, password, errorMsg };
   },
