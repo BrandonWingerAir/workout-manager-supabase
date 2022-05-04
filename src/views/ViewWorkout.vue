@@ -55,7 +55,7 @@
       </div>
 
       <!-- Exercise Info -->
-      <div class="mt-10 p-8 rounded-md flex flex-col item-center bg-light-grey shadow-md">
+      <div class="mt-10 p-8 pr-12 rounded-md flex flex-col item-center bg-light-grey shadow-md">
         <!-- Strength Training -->
         <div v-if="data.workoutType === 'strength'" class="flex flex-col gap-y-4 w-full">
           <div
@@ -122,7 +122,7 @@
             <img 
               v-if="edit" 
               @click="deleteExercise(item.id)"
-              class="absolute h-4 w-auto -left-5 cursor-pointer" 
+              class="absolute h-4 w-auto top-9 -right-8 cursor-pointer" 
               src="@/assets/images/trash-light-green.png" 
               alt=""
             />
@@ -132,7 +132,7 @@
             v-if="edit"
             @click="addExercise"
             type="button" 
-            class="py-2 px-6 rounded-sm self-start text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="py-2 px-6 mt-2 rounded-sm self-start text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
           >
             Add Exercise
           </button>
@@ -208,7 +208,7 @@
             <img 
               v-if="edit" 
               @click="deleteExercise(item.id)"
-              class="absolute h-4 w-auto -left-5 cursor-pointer" 
+              class="absolute h-4 w-auto top-9 -right-8 cursor-pointer" 
               src="@/assets/images/trash-light-green.png" 
               alt=""
             />
@@ -218,7 +218,7 @@
             v-if="edit"
             @click="addExercise"
             type="button" 
-            class="py-2 px-6 rounded-sm self-start text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+            class="py-2 px-6 mt-2 rounded-sm self-start text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
           >
             Add Exercise
           </button>          

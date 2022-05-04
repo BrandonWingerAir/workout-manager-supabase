@@ -184,6 +184,7 @@
 import { ref } from 'vue';
 import { uid } from "uid";
 import { supabase } from '../supabase/init';
+import { useRouter } from 'vue-router';
 
 export default {
   name: "create",
@@ -194,6 +195,7 @@ export default {
     const exercises = ref([]);
     const statusMsg = ref(null);
     const errorMsg = ref(null);
+    const router = useRouter();
 
     // Add exercise
     const addExercise = () => {
@@ -250,13 +252,14 @@ export default {
 
         if (error) throw error;
 
-        statusMsg.value = 'Success: Workout Created!';
+        statusMsg.value = 'Success: Workout Created! Redirecting you now, please wait...';
         workoutName.value = null;
         workoutType.value = "select-workout";
         exercises.value = [];
 
         setTimeout(() => {
           statusMsg.value = false;
+          router.push({ name: "Home" });
         }, 5000);
       } catch (error) {
         errorMsg.value = `Error: ${error.message}`;
