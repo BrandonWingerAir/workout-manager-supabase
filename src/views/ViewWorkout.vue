@@ -13,17 +13,20 @@
     <div v-if="dataLoaded">
       <!-- Workout Info -->
       <div class="flex flex-col items-center p-8 reounded-md shadow-md bg-light-grey relative">
-        <div v-if="user" class="flex absolute left-2 top-2 gap-x-2">
+        <div v-if="user" class="flex absolute left-8 top-7 gap-x-2">
           <div 
-            class="h-7 w-7 rounded-full flex justify-center items-center cursor-pointer bg-at-light-green shadow-lg"
+            class="h-10 w-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg"
             @click="editMode"
+            v-bind:class="[edit ? 'bg-at-green' : 'bg-at-light-green']"
           >
             <img src="@/assets/images/pencil-light.png" alt="" class="h-3.5 w-auto"/>
           </div>
+        </div>
+
+        <div v-if="user" class="flex absolute right-8 top-7 gap-x-2">
           <div 
             @click="deleteWorkout"
-            class="h-7 w-7 rounded-full flex justify-center items-center cursor-pointer bg-at-light-green shadow-lg"
-            
+            class="h-10 w-10 ml-1 rounded-full flex justify-center items-center cursor-pointer bg-at-light-green shadow-lg"        
           >
             <img src="@/assets/images/trash-light.png" alt="" class="h-3.5 w-auto"/>
           </div>
@@ -223,14 +226,19 @@
       </div>
 
       <!-- Update To DB -->
-      <button
-        v-if="edit" 
-        @click="update"
-        type="button" 
-        class="mt-10 py-2 px-6 rounded-sm text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
-      >
-        Update Workout
-      </button>
+      <div>
+
+      </div>
+      <div class="text-center">
+        <button
+          v-if="edit" 
+          @click="update"
+          type="button" 
+          class="mt-8 py-2 px-6 rounded-sm text-sm text-white bg-at-light-green duration-200 border-solid border-2 border-transparent hover:border-at-light-green hover:bg-white hover:text-at-light-green"
+        >
+          Update Workout
+        </button>
+      </div>
     </div>
   </div>
 </template>
