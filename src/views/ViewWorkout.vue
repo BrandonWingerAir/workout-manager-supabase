@@ -276,8 +276,6 @@ export default {
 
         data.value = workouts[0];
         dataLoaded.value = true;
-
-        console.log(data.value);
       } catch (error) {
         errorMsg.value = error.message;
 
@@ -367,6 +365,7 @@ export default {
 
         setTimeout(() => {
           statusMsg.value = false;
+          router.push({ name: "Home" })
         }, 5000);
       } catch (error) {
         errorMsg.value `Error: ${error.message}`;
