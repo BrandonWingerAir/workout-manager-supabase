@@ -1,4 +1,8 @@
-# workout_tracker
+# Workouts App (Vue)
+
+## Demo
+
+https://active-tracker-tutorial.herokuapp.com/
 
 ## Project setup
 ```
